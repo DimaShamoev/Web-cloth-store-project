@@ -1,2 +1,12 @@
 Link:
-https://www.figma.com/design/D3QyuAmPFXo8v91DIGWzRA/Cloth-Store-%7C-Fashion-Store-%7C-E-commerce-UI-Kit-(Community)?node-id=0-1&t=yGHPdpn1Wo97T1W9-0
+https://www.figma.com/community/file/1365263619600313207/cloth-store-fashion-store-e-commerce-ui-kit
+
+
+
+
+
+
+
+
+Padding:
+    padding: 40px 30px 10px 40px;

@@ -1,0 +1,159 @@
+@media screen and (max-width: 1400px) {
+    .fashion-design-imgs-block img {
+        width: 250px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .fashion-design-imgs-block {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        column-gap: 10px;
+        row-gap: 50px;
+    }
+
+    .fashion-design-imgs-block img:nth-child(even) {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .new-collection-block {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .collections-23-24-item {
+        font-size: 14px;
+    }
+
+    .collections-23-24-item img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .extra-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .collections-23-24-item img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .collections-23-24-items {
+        justify-content: space-between;
+    }
+
+    .collections-23-24-item {
+        font-size: 12px;
+    }
+
+    .collections-23-24-item img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-links {
+        display: none;
+    }
+
+    .side-menu.active {
+        width: 100%;
+    }
+
+    .links-txt::after {
+        width: 90px;
+        left: -100px;
+    }
+
+    .links-txt::before {
+        width: 90px;
+        right: -100px;
+    }
+
+    .new-collection-buttons {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-content: left;
+    }
+
+    .slider-buttons {
+        padding: 0;
+    }
+
+    .new-collection-slider-wrapper img {
+        width: 200px;
+        height: auto;
+    }
+    
+    .search-block ul li input {
+        min-width: 100px;
+    }
+
+    .new-this-week-slider-item {
+        height: 330px;
+        font-size: 14px;
+        letter-spacing: -1px;
+    }
+
+    .new-this-week-slider-item img {
+        width: 250px;
+        height: auto;
+    }
+
+    .new-collection-title,
+    .new-this-title-head-name,
+    .collection-23-24-titile {
+        font-size: 25px;
+    }
+
+    .new-this-week-cnt-block {
+        right: -32px;
+        top: 0;
+        font-size: 20px;
+    }
+
+    .footer-colum-2 img{
+        height: 100px;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    .header-wrapper {
+        padding: 20px 10px;
+    }
+
+    .search-block {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .new-collection-block {
+        padding: 30px 10px 0px 10px;
+    }
+
+    .new-this-week-wrapper {
+        padding: 60px 10px 0px 10px;
+    }
+
+    .new-this-week-track {
+        gap: 10px;
+    }
+
+    .fashion-design-block-wrapper {
+        padding: 40px 10px 0px 10px;
+    }
+
+    .footer-wrapper {
+        padding: 40px 0 40px 0;
+    }
+}

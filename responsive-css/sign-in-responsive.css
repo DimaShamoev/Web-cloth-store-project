@@ -1,0 +1,40 @@
+@media screen and (max-width: 750px) {
+    .extra-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .footer-colum-2 img {
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-links {
+        display: none;
+    }
+
+    .side-menu.active {
+        width: 100%;
+    }
+
+    .links-txt::after {
+        width: 90px;
+        left: -100px;
+    }
+
+    .links-txt::before {
+        width: 90px;
+        right: -100px;
+    }
+
+    .form-wrapper {
+        padding: 0;
+    }
+
+    .input-block {
+        width: 250px;
+    }
+}

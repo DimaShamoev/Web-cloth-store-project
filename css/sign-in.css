@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Beatrice Deck Trial Medium";
+}
+
+body {
+    background-image: url("../img/Home.png");
+    background-position: center;
+    background-size: cover;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.page-container {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+.container {
+    max-width: 1540px;
+    margin: auto;
+}
+
+/* Header */
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+.buttons ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.buttons ul li:first-child {
+    position: relative;
+}
+
+.side-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: url("../img/young-handsome-businessman-black-shirt-black-suit\ 2.png") no-repeat center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.107);
+    left: 0;
+    width: 0px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    z-index: 4;
+    overflow: auto;
+}
+
+.side-menu-wrapper {
+    margin: 40px;
+}
+
+.side-menu-links ul li a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.side-menu-links ul li a i {
+    font-size: 20px;
+}
+
+.exit-btn {
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.side-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.links-line {
+    margin: 30px 0px 10px 0px;
+    display: flex;
+}
+
+.links-txt {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: default;
+}
+
+.links-txt::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 2px;
+    background-color: black;
+    right: -150px;
+    top: 10px;
+}
+
+.links-txt::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 2px;
+    background-color: black;
+    left: -150px;
+    top: 10px;
+}
+
+
+.personal-links-btns ul li a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.personal-links-btns ul li a i {
+    font-size: 20px;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.438);
+    display: none;
+    z-index: 2;
+}
+
+.overlay.active {
+    display: initial;
+}
+
+.side-menu.active {
+    width: 450px;
+    opacity: 0.95;
+    animation: textSlide 0.5s linear;
+
+}
+
+.extra-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.extra-links ul li a {
+    font-size: 25px;
+    color: white;
+    background-color: #000000e2;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #3e3e3ee2;
+    }
+
+    &:active {
+        background-color: #6c6c6ce2;
+    }
+}
+
+/* main */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    padding: 30px;
+}
+
+.sign-in-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #6d6d6d;
+}
+
+.input-block {
+    margin: 10px 0 0 0;
+    width: 300px;
+    height: 35px;
+    position: relative;
+}
+
+.input-block input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 2px solid #6d6d6d;
+    background: transparent;
+    padding: 0px 10px;
+    color: #6d6d6d;
+
+    &::placeholder {
+        color: #6d6d6d;
+    }
+}
+
+.bx-low-vision {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 3px;
+    transition: 0.2s;
+}
+
+.bx-low-vision.active-eye {
+    background-color: #b8b8b8;
+    color: rgb(0, 0, 0);
+}
+
+.invalid-email-txt,
+.invalid-email-pass {
+    color: red;
+    font-size: 12px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.invalid-email-txt.active-email,
+.invalid-email-pass.active-pass {
+    opacity: 1;
+}
+
+.forget-pass-block {
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.forget-pass-block a {
+    color: black;
+    transition: 0.2s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.btn-block {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    margin: 15px auto;
+}
+
+.btn-block button {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: 2px solid #6d6d6d;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-block button::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-block button:hover {
+    color: white;
+    z-index: 2;
+}
+
+.btn-block button:hover::after {
+    top: 0;
+}
+
+.create-acc-block {
+    text-align: center;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.create-acc-block a {
+    color: black;
+    transition: 0.2s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+/* footer */
+footer {
+    background: url("../img/Home.png") no-repeat center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.062);
+    display: grid;
+    align-items: center;
+}
+
+.footer-wrapper {
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-wrapper ul {
+    list-style: none;
+}
+
+.footer-wrapper ul li:first-child {
+    margin-bottom: 10px;
+    opacity: 0.7;
+    cursor: default;
+}
+
+.footer-wrapper ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: 0.6;
+    transition: 0.1s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.footer-column-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
