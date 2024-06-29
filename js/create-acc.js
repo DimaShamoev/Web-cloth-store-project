@@ -7,24 +7,23 @@ let exitBtn = document.querySelector(".exit");
 menuBtn.addEventListener("click", () => {
     sideMenuBlock.classList.add("active");
     overlay.classList.add("active");
-    document.querySelector("body").style.minHeight = "100vh"
-    document.querySelector("body").style.overflow = "hidden"
-
-})
+    document.querySelector("body").style.minHeight = "100vh";
+    document.querySelector("body").style.overflow = "hidden";
+});
 
 overlay.addEventListener("click", () => {
     sideMenuBlock.classList.remove("active");
     overlay.classList.remove("active");
-    document.querySelector("body").style.minHeight = "auto"
-    document.querySelector("body").style.overflow = "auto"
-})
+    document.querySelector("body").style.minHeight = "auto";
+    document.querySelector("body").style.overflow = "auto";
+});
 
 exitBtn.addEventListener("click", () => {
     sideMenuBlock.classList.remove("active");
     overlay.classList.remove("active");
     document.querySelector("body").style.minHeight = "auto";
     document.querySelector("body").style.overflow = "auto";
-})
+});
 
 // registration form validation
 let emailInput = document.querySelector(".email-input");
@@ -41,12 +40,20 @@ let warnName = document.querySelector(".invalid-name-txt");
 let warnLastName = document.querySelector(".invalid-surname-txt");
 let numbers = /\d/;
 
-let monthSelect = document.querySelector(".month-select")
+let genderSelect = document.querySelector(".select-gender");
+let warnGender = document.querySelector(".invalid-gender-txt");
+let monthSelect = document.querySelector(".month-select");
 let warnMonth = document.querySelector(".invalid-month-txt");
 let daySelect = document.querySelector(".day-select");
 let warnDay = document.querySelector(".invalid-day-txt");
-let yearSelect = document.querySelector(".select-year")
+let yearSelect = document.querySelector(".select-year");
 let warnYear = document.querySelector(".invalid-year-txt");
+
+let onlyLetters = /^[a-zA-Z]+$/;
+let onlyNumbers = /^[0-9]+$/;
+let lettersAndNumbers = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/;
+let hasSpecial = /[!@#$%^&*(),.?":{}|<>]/;
+let hasUppercase = /[A-Z]/;
 
 createAccBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -58,39 +65,74 @@ createAccBtn.addEventListener("click", (e) => {
     }
 
     if ((passInput1.value).length < 7 || passInput1.value !== passInput2.value) {
+        warnPass1.innerHTML = "Invalid Password!";
+        warnPass1.style.color = "red";
         warnPass1.classList.add("active");
+    } else if (onlyLetters.test(passInput1.value) || onlyNumbers.test(passInput1.value)) {
+        warnPass1.innerHTML = "Password Is Weak";
+        warnPass1.style.color = "red";
+        warnPass1.classList.add("active");
+    } else if (lettersAndNumbers.test(passInput1.value) && (!hasSpecial.test(passInput1.value) || !hasUppercase.test(passInput1.value))) {
+        warnPass1.innerHTML = "Password Is Good";
+        warnPass1.style.color = "orange";
+        warnPass1.classList.add("active");
+    } else if (lettersAndNumbers.test(passInput1.value) && hasSpecial.test(passInput1.value) && hasUppercase.test(passInput1.value)) {
+        console.log("Password is strong");
+        warnPass1.classList.remove("active");
     } else {
-        warnPass1.classList.remove("active")
+        warnPass1.classList.remove("active");
     }
 
     if ((passInput2.value).length < 7 || passInput2.value !== passInput1.value) {
+        warnPass1.innerHTML = "Invalid Password!";
+        warnPass1.style.color = "red";
+        warnPass1.classList.add("active");
+        warnPass2.innerHTML = "Invalid Password!";
+        warnPass2.style.color = "red";
         warnPass2.classList.add("active");
+    } else if (onlyLetters.test(passInput2.value) || onlyNumbers.test(passInput2.value)) {
+        warnPass2.innerHTML = "Password Is Weak";
+        warnPass2.style.color = "red";
+        warnPass2.classList.add("active");
+    } else if (lettersAndNumbers.test(passInput2.value) && (!hasSpecial.test(passInput2.value) || !hasUppercase.test(passInput2.value))) {
+        warnPass2.innerHTML = "Password Is Good";
+        warnPass2.style.color = "orange";
+        warnPass2.classList.add("active");
+    } else if (lettersAndNumbers.test(passInput2.value) && hasSpecial.test(passInput2.value) && hasUppercase.test(passInput2.value)) {
+        console.log("Password is strong");
+        warnPass2.classList.remove("active");
     } else {
-        warnPass2.classList.remove("active")
+        warnPass2.classList.remove("active");
     }
 
     if (numbers.test(nameInput.value)) {
-        warnName.classList.add("active")
+        warnName.classList.add("active");
     } else {
-        warnName.classList.remove("active")
+        warnName.classList.remove("active");
     }
 
     if (numbers.test(lastNameInput.value)) {
-        warnLastName.classList.add("active")
+        warnLastName.classList.add("active");
     } else {
-        warnLastName.classList.remove("active")
+        warnLastName.classList.remove("active");
+    }
+
+    if (genderSelect.value === "00") {
+        warnGender.classList.add("active");
+    } else {
+        warnGender.classList.remove("active");
     }
 
     if (monthSelect.value === "00") {
-        warnMonth.classList.add("active")
+        warnMonth.classList.add("active");
     } else {
-        warnMonth.classList.remove("active")
+        warnMonth.classList.remove("active");
     }
 
     if (daySelect.value === "00") {
-        warnDay.classList.add("active")
+        warnDay.classList.add("active");
     } else {
-        warnDay.classList.remove("active")
+        warnDay.classList.remove("active");
     }
 
     let selectedYear = parseInt(yearSelect.value, 10);
@@ -105,12 +147,13 @@ createAccBtn.addEventListener("click", (e) => {
         !(warnPass2.classList.contains('active')) &&
         !(warnName.classList.contains('active')) &&
         !(warnLastName.classList.contains('active')) &&
+        !(warnGender.classList.contains("active")) &&
         !(warnMonth.classList.contains('active')) &&
         !(warnDay.classList.contains('active')) &&
         !(warnYear.classList.contains('active'))) {
-            window.location.href = "index.html"
-        }
-})
+        window.location.href = "index.html";
+    }
+});
 
 let eyeIcons = document.querySelectorAll(".bx-low-vision");
 let passInputs = document.querySelectorAll(".pass-input");

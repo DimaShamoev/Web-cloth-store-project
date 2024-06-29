@@ -11,6 +11,10 @@ body {
     background-size: cover;
 }
 
+#google_translate_element {
+    display: none; /* Hide the Google Translate widget */
+}
+
 .container {
     max-width: 1540px;
     margin: auto;

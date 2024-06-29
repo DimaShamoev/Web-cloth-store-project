@@ -231,6 +231,8 @@ main {
     background: transparent;
     padding: 0px 10px;
     color: #6d6d6d;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
 
     &::placeholder {
         color: #6d6d6d;

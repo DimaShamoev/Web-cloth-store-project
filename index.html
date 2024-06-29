@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://db.onlinewebfonts.com/c/2f7259ecfaa5e475102e4002d64ce981?family=Beatrice+Deck+Trial+Medium" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/2f7259ecfaa5e475102e4002d64ce981?family=Beatrice+Deck+Trial+Medium"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="responsive-css/index-responsive.css">
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <title>Cloth Store</title>
 </head>
 
@@ -36,39 +39,40 @@
 
                                 <!-- links titles #1 -->
                                 <div class="links-line">
-                                    <span class="links-txt">Main Links</span>
+                                    <span class="links-txt links-txt-1">Main Links</span>
                                 </div> <!-- links titles #1 -->
 
                                 <!-- links in side menu -->
                                 <div class="side-menu-links">
                                     <ul>
-                                        <li><a href="index.html"><i class='bx bx-home-alt-2'></i>Home</a></li>
-                                        <li><a href="#"><i class='bx bx-collection' ></i>Collections</a></li>
-                                        <li><a href="#"><i class='bx bx-party'></i>New</a></li>
-                                        <li><a href="#"><i class='bx bx-user'></i>Men</a></li>
-                                        <li><a href="#"><i class='bx bx-user'></i>Women</a></li>
-                                        <li><a href="#"><i class='bx bx-child' ></i>Kids</a></li>
+                                        <li><a href="index.html"><i class='bx bx-home-alt-2'></i><span class="side-menu-home">Home</span></a></li>
+                                        <li><a href="collection.html"><i class='bx bx-collection'></i><span class="side-menu-collection">Collection</span></a>
+                                        </li>
+                                        <li><a href="#"><i class='bx bx-party'></i><span class="side-menu-new">New</span></a></li>
+                                        <li><a href="#"><i class='bx bx-user'></i><span class="side-menu-men">Men</span></a></li>
+                                        <li><a href="#"><i class='bx bx-user'></i><span class="side-menu-women">Women</span></a></li>
+                                        <li><a href="#"><i class='bx bx-child'></i><span class="side-menu-kids">Kids</span></a></li>
                                     </ul>
                                 </div> <!-- links in side menu -->
 
                                 <!-- links titles #2 -->
                                 <div class="links-line">
-                                    <span class="links-txt">Personal</span>
+                                    <span class="links-txt links-txt-2">Personal</span>
                                 </div> <!-- links titles #2 -->
 
                                 <div class="personal-links-btns">
                                     <ul>
-                                        <li><a href="#"><i class='bx bx-heart'></i>Favorite</a></li>
-                                        <li><a href="#"><i class='bx bx-shopping-bag'></i>Cart</a></li>
-                                        <li><a href="sign-in.html"><i class='bx bx-user'></i>Sign In</a></li>
+                                        <li><a href="#"><i class='bx bx-heart'></i><span class="side-menu-favorite">Favorite</span></a></li>
+                                        <li><a href="#"><i class='bx bx-shopping-bag'></i><span class="side-menu-cart">Cart</span></a></li>
+                                        <li><a href="sign-in.html"><i class='bx bx-user'></i><span class="side-menu-sign">Sign In</span></a></li>
                                     </ul>
                                 </div>
 
                             </div> <!-- side menu wrapper -->
                         </div> <!-- side menu block -->
-                        <li class="main-links"><a href="index.html">Home</a></li>
-                        <li class="main-links"><a href="#">Collections</a></li>
-                        <li class="main-links"><a href="#">New</a></li>
+                        <li class="main-links"><a class="main-link-home" href="index.html">Home</a></li>
+                        <li class="main-links"><a class="main-link-collection" href="collection.html">Collections</a></li>
+                        <li class="main-links"><a class="main-link-new" href="#">New</a></li>
 
                     </ul><!-- main links list -->
                 </div> <!-- buttons -->
@@ -102,9 +106,9 @@
             <!-- Search block -->
             <div class="search-block">
                 <ul>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Kids</a></li>
+                    <li><a class="search-block-men" href="#">Men</a></li>
+                    <li><a class="search-block-women" href="#">Women</a></li>
+                    <li><a class="search-block-kids" href="#">Kids</a></li>
                     <li><i class='bx bx-search'></i><input type="text" placeholder="Search"></li>
                 </ul>
             </div> <!-- Search block -->
@@ -133,7 +137,7 @@
                     <div class="new-collection-buttons">
                         <!-- go to shop button -->
                         <div class="new-collection-go-shop">
-                            <span>Go To Shop</span><i class='bx bx-right-arrow-alt'></i>
+                            <span class="go-to-shop-bnt">Go To Shop</span><i class='bx bx-right-arrow-alt'></i>
                         </div> <!-- go to shop button -->
 
                         <!-- slider buttons -->
@@ -268,18 +272,18 @@
                 <div class="footer-column-1-row-1">
                     <ul>
                         <li>INFO</li>
-                        <li><a href="#">PRICING</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACTS</a></li>
+                        <li><a class="footer-price" href="#">PRICING</a></li>
+                        <li><a class="footer-about" href="#">ABOUT</a></li>
+                        <li><a class="footer-contacts" href="#">CONTACTS</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column-1-row-2">
                     <ul>
                         <li>LANGUAGES</li>
-                        <li><a href="#">GEO</a></li>
-                        <li><a href="#">ENG</a></li>
-                        <li><a href="#">ESP</a></li>
+                        <li><a class="geo-language" href="#">GEO</a></li>
+                        <li><a class="eng-language" href="#">ENG</a></li>
+                        <li><a class="esp-language" href="#">ESP</a></li>
                     </ul>
                 </div>
             </div>
@@ -290,7 +294,9 @@
         </div> <!-- footer wrapper -->
     </footer>
 
+
     <script src="js/index.js"></script>
+    <script src="js/change-language.js"></script>
 </body>
 
 </html>
