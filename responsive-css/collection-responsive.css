@@ -1,3 +1,20 @@
+@media screen and (max-width: 1200px) {
+    .new-featured-clothess-wrapper {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .new-featured-clothess-wrapper img {
+        height: 300px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .new-featured-clothess-main-wrapper {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 1030px) {
     .about-us-landing {
         flex-direction: column;
@@ -17,6 +34,17 @@
 @media screen and (max-width: 750px) {
     .extra-links {
         display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .new-featured-clothess-wrapper {
+        grid-template-columns: auto;
+    }
+
+    .new-featured-clothess-wrapper img {
+        height: 500px;
+        width: auto;
     }
 }
 

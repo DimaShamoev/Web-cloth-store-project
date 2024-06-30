@@ -170,7 +170,7 @@ body {
     background-color: #000000e2;
     height: 30px;
     width: 30px;
-    border-radius: 50%; 
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,287 +188,196 @@ body {
 }
 
 /* Main content */
-
-.search-block {
-    padding: 0px 40px 10px 40px;
+main {
+    height: auto;
+    width: 100%;
 }
 
-.search-block ul {
-    list-style: none;
+.new-clotes-landing {
+    margin: 50px 0 60px 0;
+    width: 100%;
+    height: 200px;
+    background: url("../img/new-banner.avif") no-repeat center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.297);
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px 10px rgb(255, 215, 215);
 }
 
-.search-block ul li a {
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
-    font-weight: 300;
-    transition: 0.2s;
-
-    &:hover {
-        opacity: 0.7;
-    }
-}
-
-.search-block ul li input {
-    margin-top: 20px;
-    height: 40px;
-    min-width: 360px;
-    background-color: #b1b1b17c;
-    outline: none;
-    border: none;
-    padding: 0px 10px 0px 30px;
-    font-family: inherit;
-
-    &::placeholder {
-        float: right;
-    }
-}
-
-
-.bx-search {
-    position: absolute;
-    font-size: 18px;
-    z-index: 1;
-    bottom: 10px;
-    left: 5px;
-    cursor: pointer;
-}
-
-/* New collection */
-.new-collection-block {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.new-collection-block {
-    padding: 30px 40px 0px 40px;
-}
-
-.new-collection-left-side {
+.choose-your-style-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* align-items: center; */
 }
 
-.new-collection-title {
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 0.9;
-    letter-spacing: 10px;
+.choose-your-style-title {
+    font-size: 40px;
+    line-height: 2.5;
+    text-align: left;
+    padding: 0px 40px;
 }
 
-.new-collection-txt {
-    font-size: 16px;
-    color: #3e3e3ee2;
-    margin: 10px 0 0 0;
-}
-
-.new-collection-slider {
-    display: flex;
-    column-gap: 20px;
-    row-gap: 0;
-}
-
-.new-collection-buttons {
+.choose-your-style {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 50%);
+    width: 100%;
+    height: 1000px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 40px;
+}
+
+.gruop-1-title,
+.gruop-2-title,
+.gruop-3-title,
+.gruop-4-title {
+    font-size: 13px;
+    color: white;
+}
+
+.group-1-txt,
+.group-2-txt,
+.group-3-txt,
+.group-4-txt {
+    font-size: 25px;
+    line-height: 2;
+    color: white;
+}
+
+.group-btn a {
+    padding: 5px 15px;
+    background-color: white;
+    color: black;
+    border-radius: 40px;
+    font-family: inherit;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 
-.new-collection-go-shop {
+.group-1 {
+    background: url("../img/nike-just-do-it.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.group-2 {
+    background: url("../img/nike-just-do-it\ \(1\).jpg") no-repeat center;
+    background-size: cover;
+}
+
+.group-3 {
+    background: url("../img/nike-just-do-it\ \(2\).jpg") no-repeat center;
+    background-size: cover;
+}
+
+.group-4 {
+    background: url("../img/nike-just-do-it\ \(3\).jpg") no-repeat center;
+    background-size: cover;
+}
+
+
+/* new arrivals */
+.new-arrivals-slider {
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+}
+
+.new-arrivals-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+}
+
+
+.new-arrivals-title {
+    text-align: left;
+    margin: 80px 0px 20px 0;
+    font-size: 40px;
+    padding: 0px 40px;
+}
+
+.new-arrival-btn {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    background-color: rgba(173, 173, 173, 0.687);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #b1b1b17c;
-    padding: 3px 10px;
+    justify-content: center;
     cursor: pointer;
     transition: 0.2s;
 
     &:hover {
-        opacity: 0.7;
+        background-color: rgb(173, 173, 173);
+    }
+
+    &:active {
+        background-color: rgb(202, 202, 202)
     }
 }
 
-.new-collection-go-shop i {
-    font-size: 30px;
+.new-arrival-btn-prev {
+    left: 50px;
+    top: calc(50% + 60px);
 }
 
-.slider-buttons {
-    display: flex;
-    gap: 20px;
-    padding: 0px 0px 0px 30px;
-    
+.new-arrival-btn-next {
+    right: 50px;
+    top: calc(50% + 60px);
 }
 
-.slider-buttons i {
-    font-size: 30px;
-    border: solid 2px #9494947c;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-        background-color: #d0d0d07c;
-    }
-}
-
-.new-collection-slider {
-    width: 100%;
-    overflow: hidden;
-}
-
-.new-collection-slider-wrapper {
-    display: flex;
-    gap: 50px;
-    
-}
-
-.new-collection-slider-wrapper img {
-    height: 390px;
-    width: 100%;
-}
-
-/* new this week collection */ 
-.new-this-week-wrapper {
-    padding: 60px 40px 0px 40px;
-}
-
-.new-this-week-slider {
-    overflow: hidden;
-}
-
-.new-this-week-title {
-    position: relative;
-    width: fit-content;
-}
-
-.new-this-title-head-name {
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 0.9;
-}
-
-.new-this-week-cnt-block {
-    position: absolute;
-    color: blue;
-    font-size: 25px;
-    right: -35px;
-    top: 20px;
-}
-
-.new-this-week-track {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px 0 0 0 ;
-}
-
-.new-this-week-slider-item {
-    cursor: pointer;
-}
-
-.new-this-week-slider-item img {
-    width: 350px;
-    height: 380px;
-}
-
-.name-block {
-    font-size: 12px;
-    font-weight: 100;
-}
-
-.price-block {
-    float: right;
-}
-
-.new-this-week-collection-btns {
-    display: flex;
-    margin: auto;
-    justify-content: center;
+/* newest style */
+.newest-style-wrapper {
     text-align: center;
-    padding: 20px 0 0 0;
+    margin: 80px 0 10px 0;
+}
+
+.newest-style-title {
+    font-size: 40px;
+}
+
+/* join us */
+.join-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-title {
+    font-size: 25px;
+}
+
+.joint-btns {
+    color: white;
+    display: flex;
     gap: 30px;
 }
 
-.new-this-week-collection-btns i {
-    font-size: 30px;
-    border: solid 2px #9494947c;
-    cursor: pointer;
+.joint-btns a {
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
     transition: 0.3s;
 
     &:hover {
-        background-color: #d0d0d07c;
+        box-shadow: 0 5px 7px 1px black;
     }
-}
-
-
-/* 23-24 collection */
-.collection-23-24-wrapper {
-    padding: 40px 40px 0 40px;
-}
-
-.collection-23-24-titile {
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 0.9;
-}
-
-.collections-23-24-items {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 25px;
-}
-
-.collections-23-24-items img {
-    width: 400px;
-    height: 100%;
-    cursor: pointer;
-}
-
-.collections-23-24-item {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-
-}
-
-/* fashion design block */
-.fashion-design-block-wrapper {
-    padding: 40px 40px 0px 40px;
-}
-
-.fashion-design-title-block {
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    margin: 50px 0 5px 0;
-    cursor: default;
-}
-
-
-.fashion-design-text-block {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 100;
-    opacity: 0.8;
-    cursor: default;
-}
-
-.fashion-design-imgs-block {
-    display: flex;
-    justify-content: space-between;
-    margin: 60px 0 0 0;
-}
-
-.fashion-design-imgs-block img:nth-child(even) {
-    transform: translateY(80px);
 }
 
 /* footer */
@@ -477,7 +386,7 @@ footer {
     background-size: cover;
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.062);
-    margin: 150px 0 0 0 ;
+    margin: 60px 0 0 0;
 }
 
 .footer-wrapper {
